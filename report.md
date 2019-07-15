@@ -3,7 +3,7 @@
 ## Learning algorithm
 
 The learning algorithm used is Deep Q Learning as implemented in DQL exercise.
-Here is this algorithm from original article:
+Here is this algorithm from [original article](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf):
 
 ![results](images/algorithm.png)
 

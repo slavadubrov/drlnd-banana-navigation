@@ -2,7 +2,14 @@
 
 ## Learning algorithm
 
-The learning algorithm used is Deep Q Learning as implemented in DQL exercise. As an input the vector of state is used instead of an image so convolutional neural nework is replaced with fully connected neural network. The neural network has following layers:
+The learning algorithm used is Deep Q Learning as implemented in DQL exercise.
+Here is this algorithm from original article:
+
+![results](images/algorithm.png)
+
+## Algorithm parameters
+
+As an input the vector of state is used instead of an image so convolutional neural nework is replaced with fully connected neural network. The neural network has following layers:
 
 - Fully connected layer - input: 37 (state size) output: 64
 - Fully connected layer - input: 64 output 64
@@ -80,3 +87,18 @@ Episode 1900	Average Score: 14.83
 Episode 2000	Average Score: 14.61
 ```
 
+## Ideas for future work
+
+1. Double Deep Q Networks
+    - Q-learning can be overoptimistic in large-scale problems, even if these are deterministic, due to the inherent estimation errors of learning
+    - Double Q-learning can be used at scale to successfully reduce this overoptimism, resulting in more stable and reliable learning
+2. Prioritized Experience Replay
+    - can make learning from experience replay more efficient
+    - prioritized replay could speed up learning by a factor 2 and leads to a new state-of-the-art of performance
+3. Dueling DQN
+    - decouples value and advantage in deep Q-networks, while sharing a common feature learning module
+    - could lead to dramatic improvements over existing approaches for deep RL 
+4. RAINBOW
+    - Combines all previous improvements 
+5. Learning from pixels
+    - Could bring ability to train on any task
